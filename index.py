@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 @app.get('/')
 def index():
+	os.system("dir")
 	sequence = request.args.get('sequence', None)
 	if sequence is None:
 		return render_template('index.html')
