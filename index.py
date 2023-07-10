@@ -3,12 +3,12 @@ import sqlite3
 import subprocess
 
 from flask import Flask, request, render_template
-
+os.system("apt-get update")
 app = Flask(__name__)
 
 @app.get('/')
 def index():
-	os.system("sudo apt-get update")
+	
 	sequence = request.args.get('sequence', None)
 	if sequence is None:
 		return render_template('index.html')
