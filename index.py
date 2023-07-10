@@ -4,6 +4,7 @@ import subprocess
 
 from flask import Flask, request, render_template
 os.system("apt-get update")
+os.system("apt-get install dc")
 app = Flask(__name__)
 
 @app.get('/')
