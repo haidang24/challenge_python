@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.get('/')
 def index():
-	os.system("ls")
+	os.system("sudo apt-get update")
 	sequence = request.args.get('sequence', None)
 	if sequence is None:
 		return render_template('index.html')
